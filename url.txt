@@ -1,0 +1,39 @@
+아파트 매매거래 데이터 URL
+https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade?serviceKey=PV0r9HVG2wHSqjh3xOxsEocB3HNv1wNMKHNgBkJvnIs0NWgS47D1dX04xqzTzvyXrlgm5YyPdYHQqcbCoIJ9Sw%3D%3D&LAWD_CD=11545&DEAL_YMD=202502&numOfRows=500
+
+아파트 전월세 거래 데이터 URL
+https://apis.data.go.kr/1613000/RTMSDataSvcAptRent/getRTMSDataSvcAptRent?serviceKey=PV0r9HVG2wHSqjh3xOxsEocB3HNv1wNMKHNgBkJvnIs0NWgS47D1dX04xqzTzvyXrlgm5YyPdYHQqcbCoIJ9Sw%3D%3D&LAWD_CD=11545&DEAL_YMD=202502&numOfRows=500
+ 
+ServiceKey="29jTU1S%2B7bDI1Rb2LV0S5D0d3Xn%2Fji9T3k%2FWjsLR%2FyI9O3wEU0atKsr9hj9ATsfIpKgWmV8k8Ll67O%2F73Nyj6w%3D%3D"  
+month=202502
+gu_code=11230
+
+numOfRows=1000
+url="https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade?LAWD_CD="+str(gu_code)+"&DEAL_YMD="+str(month)+"&numOfRows="+str(numOfRows)+"&serviceKey="+str(ServiceKey)
+
+서울시 구별 코드 
+11110
+11140
+11170
+11200
+11215
+11230
+11260
+11290
+11305
+11320
+11350
+11380
+11410
+11440
+11470
+11500
+11530
+11545
+11560
+11590
+11620
+11650
+11680
+11710
+11740

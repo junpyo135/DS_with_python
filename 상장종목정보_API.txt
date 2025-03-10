@@ -1,0 +1,29 @@
+ServiceKey="29jTU1S%2B7bDI1Rb2LV0S5D0d3Xn%2Fji9T3k%2FWjsLR%2FyI9O3wEU0atKsr9hj9ATsfIpKgWmV8k8Ll67O%2F73Nyj6w%3D%3D"        # 공지사항 참고 
+numOfRows=3000
+baseDate=20250306
+url="https://apis.data.go.kr/1160100/service/GetKrxListedInfoService/getItemInfo?serviceKey="+str(ServiceKey)+"&basDt="+str(baseDate)+"&numOfRows="+str(numOfRows)+"&pageNo=1&resultType=xml"
+result=urlopen(url)
+stock=BeautifulSoup(result,'lxml-xml')
+
+
+te=stock.find_all("item")
+data=[]
+
+# indent 매우 중요 
+for i in range(len(te)):
+    date=te[i].basDt.string.strip()
+    market=te[i].mrktCtg.string.strip()
+    name=te[i].itmsNm.string.strip()
+    fullName=te[i].corpNm.string.strip()
+    code=te[i].srtnCd.string.strip()
+    fullCode=te[i].isinCd.string.strip()
+    bubinCode=te[i].crno.string.strip()
+
+    total=[date,market, name, fullName, code, fullCode, bubinCode]
+    data.append(total)
+    
+stock_data=pd.DataFrame(data, columns=['date','market', 'name', 
+      'fullName', 'code', 'fullCode', 'bubinCode'])
+
+
+stock_data.head()
